@@ -25,7 +25,12 @@ Route::get('/dashboard', function () {
 require __DIR__.'/student_auth.php';
 
 // ............... Admin Routes .........
+
 Route::get('/admin/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('admin.dashboard');
+
+Route::get('/admin/check', function () {
+    return view('check');
+})->middleware(['auth',"can:isAdmin"])->name('admin.check');
 require __DIR__.'/auth.php';

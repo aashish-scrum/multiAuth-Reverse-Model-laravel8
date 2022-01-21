@@ -10,10 +10,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     @can('isAdmin')
-                        <p>You Are Admin</p>
-                    @endcan
-                    @can('isTeacher')
-                        <p>You Are Teacher</p>
+                        Only Admin Allowed
                     @endcan
                 </div>
             </div>
